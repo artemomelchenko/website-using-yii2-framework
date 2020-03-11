@@ -11,35 +11,27 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-    </p>
-
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-                <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-
-                <?= $form->field($model, 'email') ?>
-
-                <?= $form->field($model, 'subject') ?>
-
-                <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-
-                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                ]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
+<div class="wrapper pb-50">
+    <div class="container">
+        <div class="section-four">
+            <div class="image-block-3">
+                <img src="img/illustration_3.png" alt="illustration_3">
+            </div>
+            <div class="form-block">
+                <h3 class="h3 t-center">Contact Us!</h3>
+                <div class="form-block-description">Regarding any questions fill in the form or add us over
+                    facebook/telegram for easy communication.</div>
+                <form action="index.html" class="main-form" method="POST">
+                    <div class="input-block-form"><input type="text" name="name-user" placeholder="Name"></div>
+                    <div class="input-block-form"><input type="email" required name="user-email"
+                                                         placeholder="E-mail" id=""></div>
+                    <div class="input-block-form"><input type="text" class="text-message" name="text-message"
+                                                         placeholder="Message">
+                    </div>
+                    <div> <a href="#"><button class="button-yellow">Start now!</button></a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-
 </div>
