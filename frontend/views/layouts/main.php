@@ -28,7 +28,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <header class="global-header">
     <div class="logo-block">
-        <a href="index.html"><img src="img/logo.png" alt="AmzBurn-logo"></a>
+        <a href="/"><img src="img/logo.png" alt="AmzBurn-logo"></a>
     </div>
     <div class="menu-block-header">
         <nav class="site-nav">

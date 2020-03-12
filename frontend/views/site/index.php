@@ -20,7 +20,7 @@ $this->title = 'My Yii Application';
                     </br> reinstating.
                 </div>
                 <div class="mt-30 sm-tb-mt-10">
-                    <a href="#"><button class="button-yellow">Start now!</button></a>
+                    <a href="/services"><button class="button-yellow button-yellow-others">Start now!</button></a>
                 </div>
             </div>
             <div class="block-section-image"><img src="img/image-section-1.png" alt="image-section-1"></div>
@@ -43,7 +43,7 @@ $this->title = 'My Yii Application';
                         instant reinstating, opportunities of
                         Vendor Central account, removing Intellectual Property complaints, tools of protecting from
                         hijackers.</div>
-                    <div><button class="button-learn-more mt-15">Learn more</button></div>
+                    <div><a href="/services#account-security"><button class="button-learn-more mt-15">Learn more</button></a></div>
                 </div>
 
 
@@ -57,7 +57,7 @@ $this->title = 'My Yii Application';
                         In addition, rank your product with an absolutely secure keywords boost-technology to the
                         first
                         page.</div>
-                    <div><button class="button-learn-more mt-15">Learn more</button></div>
+                    <div><a href="/services#marketing"><button class="button-learn-more mt-15">Learn more</button></a></div>
                 </div>
 
                 <div class="sec-2-block">
@@ -67,7 +67,7 @@ $this->title = 'My Yii Application';
                     </div>
                     <div class="section-two-description">Enlarge visibility of your product with simple, but
                         irreplaceable things that raise your listing to the higher level.</div>
-                    <div><button class="button-learn-more mt-15">Learn more</button></div>
+                    <div><a href="#"><button class="button-learn-more mt-15">Learn more</button></a></div>
                 </div>
 
                 <div class="sec-2-block">
@@ -80,7 +80,7 @@ $this->title = 'My Yii Application';
                         of
                         all competitors with the latest design solutions.
                         Feel the difference in increasing your conversion rate and sales boost!</div>
-                    <div><button class="button-learn-more mt-15">Learn more</button></div>
+                    <div><a href="#"><button class="button-learn-more mt-15">Learn more</button></a></div>
                 </div>
 
 
@@ -95,7 +95,7 @@ $this->title = 'My Yii Application';
                         tons
                         of
                         other valuable staff!</div>
-                    <div><button class="button-learn-more mt-15">Learn more</button></div>
+                    <div><a href="#"><button class="button-learn-more mt-15">Learn more</button></a></div>
                 </div>
             </div>
         </div>
@@ -176,19 +176,32 @@ $this->title = 'My Yii Application';
                 <div class="form-block-description">Regarding any questions fill in the form or add us over
                     facebook/telegram for easy
                     communication.</div>
-                <form action="index.html" class="main-form" method="POST">
-                    <div class="input-block-form"><input type="text" name="name-user" placeholder="Name"></div>
-                    <div class="input-block-form"><input type="email" required name="user-email"
-                                                         placeholder="E-mail" id=""></div>
-                    <div class="input-block-form"><input type="text" class="text-message" name="text-message"
-                                                         placeholder="Message">
+                <form name="mainForm" class="main-form mt-20">
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_name" class="global-input" id="">
+                        <label id="label_name">Name</label>
                     </div>
-                    <div> <a href="#"><button class="button-yellow">Start now!</button></a>
+
+                    <div class="row-form input-block-form">
+                        <input type="email" name="" id="input_email" class="global-input" id="">
+                        <label id="label_email">E-mail</label>
                     </div>
-                </form>
+
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_message" class="global-input">
+                        <label id="label_message">Message</label>
+                    </div>
+
+                    <div class="row-form input-block-form">
+                        <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()" class="form-submit button-yellow" value="Start now!">
+                    </div>
             </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
 <div class="wrapper">
     <div class="container">
@@ -202,11 +215,9 @@ $this->title = 'My Yii Application';
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
                 <div class="two">
-                    <div class="in-block"><a class="one" href="#"> <img class="facebook-img" src="img/facebook.png"
-                                                                        alt="facebook_img"></a></div>
+                    <div class="in-block"><a class="one" href="#"> <img class="facebook-img" src="img/facebook.png" alt="facebook_img"></a></div>
                     <div class="in-block">
-                        <a class="one" href="#"> <img class="message-img" src="img/message.png"
-                                                      alt="message_img"></a></div>
+                        <a class="one" href="#"> <img class="message-img" src="img/message.png" alt="message_img"></a></div>
                 </div>
             </div>
         </div>

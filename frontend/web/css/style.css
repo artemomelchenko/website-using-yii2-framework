@@ -96,17 +96,17 @@ img {
     color: #fff;
     font-style: normal;
     font-weight: bold;
-    cursor: pointer;
     font-size: 22px;
 }
-
-.button-yellow:hover {
-    background: #FF7800;
+.button-yellow-others:hover{
+background-color: #FF7800;
+}
+.button-yellow-others{
+    cursor: pointer;
 }
 
 .button-yellow:focus {
     background-color: #E66C00;
-    ;
     outline: none;
 }
 
@@ -123,6 +123,7 @@ img {
     cursor: pointer;
     font-size: 14px;
 }
+
 
 .button-learn-more:hover {
     border: 1px solid #FF9E48;
@@ -333,6 +334,7 @@ img {
     padding-left: 10px;
     padding-right: 10px;
     font-family: "GilroyLight";
+    font-size: 16px;
 }
 
 .main-form input {
@@ -353,6 +355,74 @@ img {
     border: none;
     outline: none;
     border-bottom: 1px solid #1D1D1F;
+}
+
+/*New form*/
+
+#select_type, input:focus {
+    outline: none
+}
+
+.row-form {
+    position: relative
+}
+
+.row-form label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transition: 0.5s;
+    pointer-events: none
+}
+
+.valid {
+    border-bottom: 1px solid #1D1D1F;
+    top: -10px;
+    background-color: white
+}
+
+.invalid {
+    border-bottom: 1px solid #EB5757 !important;
+    top: -10px;
+    background-color: white;
+    color: #EB5757;
+    font-size: 13px;
+}
+
+.focus {
+    top: -10px !important;
+    background-color: white;
+    font-size: 13px;
+    padding-left: 3px;
+    padding-right: 3px
+}
+
+.focus-invalid {
+    color: #EB5757;
+    top: -10px !important;
+    background-color: white;
+    font-size: 13px;
+    padding-left: 3px;
+    padding-right: 3px
+}
+
+.row-form input:focus~label {
+    top: -10px;
+    background-color: white;
+    font-size: 13px;
+    padding-left: 3px;
+    padding-right: 3px
+}
+
+.submit-form-success {
+    cursor: pointer;
+    background-color: #FF7800;
+    color: #fff
+}
+
+input.form-submit {
+    max-width: 200px;
+    margin: auto;
 }
 
 /*Global CSS STYLE END*/
@@ -549,6 +619,7 @@ img {
     max-width: 280px;
     margin: auto;
     display: flex;
+    position: relative;
 }
 
 .section-one-block-1 {
@@ -802,6 +873,9 @@ nav a:hover, nav a:focus {
 
 .img-client {
     max-width: 160px;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 100px;
 }
 
 .text-block-testimonials {

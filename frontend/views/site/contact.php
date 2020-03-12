@@ -20,17 +20,31 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="form-block">
                 <h3 class="h3 t-center">Contact Us!</h3>
                 <div class="form-block-description">Regarding any questions fill in the form or add us over
-                    facebook/telegram for easy communication.</div>
-                <form action="index.html" class="main-form" method="POST">
-                    <div class="input-block-form"><input type="text" name="name-user" placeholder="Name"></div>
-                    <div class="input-block-form"><input type="email" required name="user-email"
-                                                         placeholder="E-mail" id=""></div>
-                    <div class="input-block-form"><input type="text" class="text-message" name="text-message"
-                                                         placeholder="Message">
+                    facebook/telegram for easy
+                    communication.</div>
+                <form name="mainForm" class="main-form mt-20">
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_name" class="global-input" id="">
+                        <label id="label_name">Name</label>
                     </div>
-                    <div> <a href="#"><button class="button-yellow">Start now!</button></a>
+
+                    <div class="row-form input-block-form">
+                        <input type="email" name="" id="input_email" class="global-input" id="">
+                        <label id="label_email">E-mail</label>
                     </div>
-                </form>
+
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_message" class="global-input">
+                        <label id="label_message">Message</label>
+                    </div>
+
+                    <div class="row-form input-block-form">
+                        <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()" class="form-submit button-yellow" value="Start now!">
+                    </div>
+            </div>
+            </form>
             </div>
         </div>
     </div>

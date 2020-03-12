@@ -8,8 +8,8 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->registerCssFile('css/owl.carousel.min.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
-$this->registerCssFile('css/owl.theme.default.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
+$this->registerCssFile('css/owl.carousel.min.css');
+$this->registerCssFile('css/owl.theme.default.css');
 
 
 $this->registerJsFile('js/owl.carousel.min.js', ['depends' => [\frontend\assets\AppAsset::className()]]);
@@ -26,8 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="owl-carousel testimonials mt-50">
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -46,8 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -66,8 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -86,8 +83,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -106,8 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -126,8 +121,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div>
             <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client"
-                                                         alt="img-client"></div>
+                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>
                 <div class="text-block-testimonials">
                     <div class="name-testimonial-author">
                         <div class="name-client">John Doe</div>
@@ -157,18 +151,29 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h3 class="h3 t-center">Write testimonial</h3>
                 <div class="form-block-description">But I must explain to you how all this mistaken idea of
                     denouncing pleasure and praising pain was born</div>
-                <form action="index.html" class="main-form" method="POST">
-                    <div class="input-block-form">
-                        <input type="text" name="name-user" placeholder="Name">
-                    </div>
-                    <div class="input-block-form">
-                        <input type="email" required="" name="user-email" placeholder="E-mail" id="">
-                    </div>
-                    <div class="input-block-form">
-                        <input type="text" class="text-message" name="text-testimonial" placeholder="Testimonial">
-                    </div>
-                    <div> <a href="#"><button class="button-yellow">Start now!</button></a>
-                    </div>
+                <div class="form-block">
+                    <form name="mainForm" class="main-form mt-20">
+
+                        <div class="row-form input-block-form">
+                            <input type="text" name="" id="input_name" class="global-input" id="">
+                            <label id="label_name">Name</label>
+                        </div>
+
+                        <div class="row-form input-block-form">
+                            <input type="email" name="" id="input_email" class="global-input" id="">
+                            <label id="label_email">E-mail</label>
+                        </div>
+
+
+                        <div class="row-form input-block-form">
+                            <input type="text" name="" id="input_message" class="global-input">
+                            <label id="label_message">Message</label>
+                        </div>
+
+                        <div class="row-form input-block-form">
+                            <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()" class="form-submit button-yellow" value="Start now!">
+                        </div>
+                </div>
                 </form>
             </div>
         </div>

@@ -176,11 +176,11 @@
     .section-one, .section-four {
         flex-direction: column;
     }
-    .input-block-form, .form-block-description {
+    /* .input-block-form, .form-block-description {
         max-width: 100%;
         padding-left: 25px;
         padding-right: 25px;
-    }
+    } */
     .section-five {
         text-align: center;
     }

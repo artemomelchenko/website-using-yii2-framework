@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <!-- FAQ -->
-    <div>
+    <div id="account-security">
         <div class="section-two-img-text">
             <div class="section-two-img-text-img"><img src="img/iconn_security.png" alt=""></div>
             <div class="section-two-img-text-title">Account Security</div>
@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <!-- FAQ -->
-    <div class="mt-100 sm-tb-mt-50">
+    <div class="mt-100 sm-tb-mt-50"  id="marketing">
         <div class="section-two-img-text">
             <div class="section-two-img-text-img"><img src="img/icon_marketig.png" alt=""></div>
             <div class="section-two-img-text-title">Marketing and Advertising</div>
