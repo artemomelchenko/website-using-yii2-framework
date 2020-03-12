@@ -11,6 +11,11 @@ use yii\captcha\Captcha;
 $this->registerCssFile('css/owl.carousel.min.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
 $this->registerCssFile('css/owl.theme.default.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
 
+
+$this->registerJsFile('js/owl.carousel.min.js', ['depends' => [\frontend\assets\AppAsset::className()]]);
+$this->registerJsFile('js/testimonials-slider.js', ['depends' => [\frontend\assets\AppAsset::className()]]);
+
+
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
