@@ -8,6 +8,9 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
+$this->registerCssFile('css/owl.carousel.min.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
+$this->registerCssFile('css/owl.theme.default.css', ['depends' => [\frontend\assets\AppAsset::className()]]);
+
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
