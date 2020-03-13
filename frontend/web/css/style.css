@@ -98,10 +98,12 @@ img {
     font-weight: bold;
     font-size: 22px;
 }
-.button-yellow-others:hover{
-background-color: #FF7800;
+
+.button-yellow-others:hover {
+    background-color: #FF7800;
 }
-.button-yellow-others{
+
+.button-yellow-others {
     cursor: pointer;
 }
 
@@ -123,7 +125,6 @@ background-color: #FF7800;
     cursor: pointer;
     font-size: 14px;
 }
-
 
 .button-learn-more:hover {
     border: 1px solid #FF9E48;
@@ -1039,4 +1040,39 @@ nav a:hover, nav a:focus {
 
 .testimonials .owl-nav button.owl-prev:focus, .testimonials .owl-nav button.owl-next:focus {
     outline: none;
+}
+
+/*Animation*/
+
+.sellers-div {
+    animation-name: sellersAnimate;
+    animation-duration: 2s;
+}
+
+@keyframes sellersAnimate {
+    from {
+        left: -100px;
+        opacity: 0.1;
+        top: -5000px;
+    }
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+}
+
+.services-div, .faq-div, .contact-div{
+    animation-name: servicesAnimate;
+    animation-duration: 2s;
+}
+
+@keyframes servicesAnimate {
+    from {
+        opacity: 0.1;
+        top: -5000px;
+    }
+    to {
+        top: 30px;
+        opacity: 1;
+    }
 }
