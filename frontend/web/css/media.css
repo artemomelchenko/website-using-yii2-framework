@@ -118,6 +118,20 @@
 }
 
 @media (max-width:767px) {
+    .section-error {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .section-error-block1 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .section-error-block1, .section-error-block-2 {
+        width: 100%;
+    }
+    .section-error-block-2 {
+        margin-top: 50px;
+    }
     .section-three {
         flex-direction: column-reverse;
     }
@@ -126,7 +140,6 @@
     }
     .section-one-text-h1 {
         margin-top: 0px;
-        font-size: 24px;
     }
     .section-two-img-text-title {
         padding-left: 15px;
@@ -150,6 +163,9 @@
 }
 
 @media (max-width:480px) {
+    nav ul.opening {
+        left: auto;
+    }
     .global-header, .section-four, .section-three, .parent-container {
         padding-left: 25px;
         padding-right: 25px;

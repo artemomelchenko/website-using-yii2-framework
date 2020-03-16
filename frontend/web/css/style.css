@@ -112,6 +112,14 @@ img {
     outline: none;
 }
 
+.fs-26 {
+    font-size: 26px;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
 .button-learn-more {
     background: white;
     border-radius: 8px;
@@ -317,6 +325,11 @@ img {
     color: #929292;
 }
 
+.mw-800 {
+    max-width: 800px;
+    margin: auto;
+}
+
 .copywrite {
     font-style: normal;
     font-weight: 500;
@@ -361,7 +374,7 @@ img {
 /*Menu mobile*/
 
 @media(max-width: 779px) {
-    .menu-toggle.open::after{
+    .menu-toggle.open::after {
         background-color: white;
         content: "";
         position: fixed;
@@ -371,12 +384,12 @@ img {
         top: 0;
         z-index: 2;
     }
-    .menu-toggle.open{
+    .menu-toggle.open {
         position: fixed;
         z-index: 99;
     }
     nav ul.opening {
-        left: 42%;
+        left: 43%;
         text-align: center;
         position: fixed;
         z-index: 99;
@@ -384,13 +397,12 @@ img {
     }
     .ul-menu-header li {
         display: block;
-        
     }
     .ul-menu-header li {
         display: block;
         padding-right: 0px;
     }
-    .hamburger{
+    .hamburger {
         position: fixed;
         z-index: 99;
         right: 20px;
@@ -1114,4 +1126,72 @@ nav a:hover, nav a:focus {
         top: 30px;
         opacity: 1;
     }
+}
+
+/*Error page*/
+
+.section-error {
+    overflow: hidden;
+}
+
+.section-error-block1 {
+    left: auto;
+    right: auto;
+    width: 35%;
+    margin-left: auto;
+    float: left;
+}
+
+.section-error-block-2 {
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    width: 65%;
+    float: left;
+}
+
+.section-error {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+/*popup style*/
+
+.popup-container {
+    width: 25%;
+    position: fixed;
+    left: 37.5%;
+    top: 25%;
+    z-index: 999;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.popup-container.active {
+    opacity: 1;
+    display: block;
+}
+
+#shadow.active {
+    opacity: 1;
+    display: block;
+}
+
+.popup-container .form-block-description, .popup-container .row-form label, .popup-container .section-one-text-h2, .h3 {
+    text-transform: none;
+}
+
+#shadow {
+    top: 0;
+    display: none;
+    position: fixed;
+    z-index: 998;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    transition: opacity .1s ease;
 }

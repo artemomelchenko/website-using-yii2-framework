@@ -88,6 +88,11 @@ class SiteController extends Controller
         return $this->render('services');
     }
 
+    public function actionSuccess()
+    {
+        return $this->render('success');
+    }
+
     /**
      * Logs in a user.
      *

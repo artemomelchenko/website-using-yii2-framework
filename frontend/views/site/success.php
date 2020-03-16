@@ -1,13 +1,15 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $name string */
-/* @var $message string */
-/* @var $exception Exception */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model \frontend\models\ContactForm */
 
 use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
 
-$this->title = $name;
+$this->title = 'Success';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="wrapper">
     <div class="container">
@@ -16,8 +18,8 @@ $this->title = $name;
                 <div class="section-error">
                     <div class="section-error-block1">
                         <div class="section-one-text-h1 mt-70 sm-tb-mt-0">
-                            Sorry</div>
-                        <div class="fs-26 mt-15 "><b>We couldn’t <br>find the page</b>
+                        Thank<br> you!</div>
+                        <div class="fs-26 mt-15 "><b>we will contact you</b>
                         </div>
                         <div class="mt-30 sm-tb-mt-10">
                             <a href="/"><button class="button-learn-more mt-15">Main page</button></a>

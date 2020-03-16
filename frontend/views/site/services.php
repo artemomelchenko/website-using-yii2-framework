@@ -11,6 +11,8 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<div id="shadow"></div>
+
 <div class="parent-container">
     <div class="t-center pt-50">
 
@@ -37,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <div class="bottom-answer-info">
                         <b>Price 400$ / 250$</b>
-                        <div><button class="button-learn-more mt-15">Contact now</button></div>
+                        <div><button id="open-popup" onclick="openPopup(1.1)" class="button-learn-more mt-15">Contact now</button></div>
                     </div>
                 </div>
             </li>
@@ -101,4 +103,37 @@ $this->params['breadcrumbs'][] = $this->title;
             </li>
         </ul>
     </div>
+</div>
+<div class="popup-container">
+<div class="form-block">
+                <h3 class="h3 t-center">Contact Us!</h3>
+                <div class="form-block-description">Regarding any questions fill in the form or add us over
+                    facebook/telegram for easy
+                    communication.</div>
+                <form name="mainForm" class="main-form mt-20">
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_name" class="global-input">
+                        <label id="label_name">Name</label>
+                    </div>
+
+                    <div class="row-form input-block-form">
+                        <input type="email" name="" id="input_email" class="global-input">
+                        <label id="label_email">E-mail</label>
+                    </div>
+
+
+                    <div class="row-form input-block-form">
+                        <input type="text" name="" id="input_message" class="global-input">
+                        <label id="label_message">Message</label>
+                    </div>
+
+                    <div class="row-form">
+ <input type="hidden" id="custId" name="custId" value="3487">
+                    </div>
+
+                    <div class="row-form input-block-form">
+                        <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()" class="form-submit button-yellow" value="Start now!">
+                    </div>
+            </form></div>
 </div>

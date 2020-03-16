@@ -46,6 +46,7 @@ return [
                 'services' => 'site/services',
                 'testimonials' => 'site/testimonials',
                 'contact' => 'site/contact',
+                'success' => 'site/success',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],
