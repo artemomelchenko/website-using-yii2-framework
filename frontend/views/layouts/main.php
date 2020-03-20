@@ -47,7 +47,7 @@ AppAsset::register($this);
 <?= $content ?>
 <footer class="global-footer">
     <div class="copywrite">© AmzBurn, 2020</div>
-    <div class="name-bizmental-footer">CREATED BY <span>bizmental</span></div>
+    <div class="name-bizmental-footer">CREATED BY <span><a target="blank" href="https://bizmental.com.ua/">bizmental</a></span></div>
 </footer>
 
 <?php $this->endBody() ?>

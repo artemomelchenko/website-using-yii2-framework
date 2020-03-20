@@ -248,7 +248,8 @@ img {
 .mt-50 {
     margin-top: 50px;
 }
-.mb-10{
+
+.mb-10 {
     margin-bottom: 10px;
 }
 
@@ -347,6 +348,12 @@ img {
     font-size: 16px;
     line-height: 22px;
     text-transform: uppercase;
+    color: #929292;
+    text-decoration: none;
+}
+
+.name-bizmental-footer span a {
+    text-decoration: none;
     color: #929292;
 }
 
