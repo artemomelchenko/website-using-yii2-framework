@@ -5,16 +5,16 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="one-section-animation">
-    <div class="sellers-div"><img src="img/sellers.png" alt="sellers"></div>
+    <div class="sellers-div-one"><img src="img/sellers.png" alt="sellers"></div>
 </div>
 <div class="wrapper" id="wrapper-1-home">
     <div class="container">
         <div class="section-one">
             <div class="section-one-block-1">
-                <div class="section-one-text-h1 mt-70 sm-tb-mt-0">
+                <h1 class="section-one-text-h1 mt-70 sm-tb-mt-0">
                     All-in-one<br>
                     <u class="yellow-u">Amazon</u> Service<br>
-                    for sellers</div>
+                    for sellers</h1>
                 <div class="section-one-text-p mt-25 ">Reach the maximum safety for your<br> business on Amazon. Get
                     instant
                     </br> reinstating.
@@ -32,12 +32,12 @@ $this->title = 'My Yii Application';
     <div class="services-div"><img src="img/services.png" alt="services"></div>
     <div class="container">
         <div class="section-two">
-            <div class="section-one-text-h2">Exclusive Comprehensive Services </div>
+            <h2 class="section-one-text-h2">Exclusive Comprehensive Services </h2>
             <div class="mb-70 tb-mb-50 sm-tb-mb-50 sm-mb-50 section-two-block-text">
                 <div class="sec-2-block">
                     <div class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/iconn_security.png" alt=""></div>
-                        <div class="section-two-img-text-title">Account Security</div>
+                        <h3 class="section-two-img-text-title">Account Security</h3>
                     </div>
                     <div class="section-two-description">Reach the maximum safety for your business on Amazon. Get
                         instant reinstating, opportunities of
@@ -50,7 +50,7 @@ $this->title = 'My Yii Application';
                 <div class="sec-2-block">
                     <div class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/icon_marketig.png" alt=""></div>
-                        <div class="section-two-img-text-title">Marketing and<br> Advertising</div>
+                        <h3 class="section-two-img-text-title">Marketing and<br> Advertising</h3>
                     </div>
                     <div class="section-two-description">Increase your sales with PPC creating and optimization,
                         development and customization of advertising on social networks.<br>
@@ -63,7 +63,7 @@ $this->title = 'My Yii Application';
                 <div class="sec-2-block">
                     <div class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/icon_listing.png" alt=""></div>
-                        <div class="section-two-img-text-title">Listing Optimization</div>
+                        <h3 class="section-two-img-text-title">Listing Optimization</h3>
                     </div>
                     <div class="section-two-description">Enlarge visibility of your product with simple, but
                         irreplaceable things that raise your listing to the higher level.</div>
@@ -73,7 +73,7 @@ $this->title = 'My Yii Application';
                 <div class="sec-2-block">
                     <div class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/icon_branding.png" alt=""></div>
-                        <div class="section-two-img-text-title">Branding</div>
+                        <h3 class="section-two-img-text-title">Branding</h3>
                     </div>
                     <div class="section-two-description">Create your own unique branding style and become the
                         best
@@ -85,9 +85,9 @@ $this->title = 'My Yii Application';
 
 
                 <div class="sec-2-block">
-                    <div class="section-two-img-text">
+                    <h class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/icon_reviews.png" alt=""></div>
-                        <div class="section-two-img-text-title">Reviews and<br> Customer Service</div>
+                        <h3 class="section-two-img-text-title">Reviews and<br> Customer Service</h3>
                     </div>
                     <div class="section-two-description">Make your listing more attractive with AmzBurn review
                         tools.
@@ -108,7 +108,7 @@ $this->title = 'My Yii Application';
     <div class="container">
         <div class="section-three">
             <div class="block-faq">
-                <h3 class="h3 t-center">FAQs</h3>
+                <h2 class="t-center">FAQs</h2>
                 <div>
                     <ul class="faq">
                         <li>
@@ -172,7 +172,7 @@ $this->title = 'My Yii Application';
                 <img src="img/illustration_3.png" alt="illustration_3">
             </div>
             <div class="form-block">
-                <h3 class="h3 t-center">Contact Us!</h3>
+                <h2 class="t-center">Contact Us!</h2>
                 <div class="form-block-description">Regarding any questions fill in the form or add us over
                     facebook/telegram for easy
                     communication.</div>
@@ -208,10 +208,10 @@ $this->title = 'My Yii Application';
         <div class="section-five">
             <div class="one">
                 <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact us</a></li>
                     <br class="br-none">
-                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="/testimonials">Testimonials</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
                 <div class="two">

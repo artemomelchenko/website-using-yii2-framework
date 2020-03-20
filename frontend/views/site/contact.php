@@ -15,10 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="section-four">
             <div class="image-block-3">
-                <img src="img/illustration_3.png" alt="illustration_3">
+                <img src="img/contact-page.png" alt="contact-page-png">
             </div>
             <div class="form-block">
-                <h3 class="h3 t-center">Contact Us!</h3>
+                <h1 class="t-center mb-15">Contact Us!</h1>
                 <div class="form-block-description">Regarding any questions fill in the form or add us over
                     facebook/telegram for easy
                     communication.</div>

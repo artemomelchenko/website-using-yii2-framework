@@ -17,14 +17,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="t-center pt-50">
 
         <div class="section-one-block-1 d-block">
-            <img src="img/illustration_2.png" alt=""></div>
+            <img src="img/services-page.png" alt="services-page-png"></div>
+            <h1 class="t-center mt-20 mb-20">Services</h1>
     </div>
 
     <!-- FAQ -->
     <div id="account-security">
         <div class="section-two-img-text">
             <div class="section-two-img-text-img"><img src="img/iconn_security.png" alt=""></div>
-            <div class="section-two-img-text-title">Account Security</div>
+            <h3 class="section-two-img-text-title">Account Security</h3>
         </div>
         <ul class="faq">
             <li>
@@ -68,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="mt-100 sm-tb-mt-50" id="marketing">
         <div class="section-two-img-text">
             <div class="section-two-img-text-img"><img src="img/icon_marketig.png" alt=""></div>
-            <div class="section-two-img-text-title">Marketing and Advertising</div>
+            <h3 class="section-two-img-text-title">Marketing and Advertising</h3>
         </div>
         <ul class="faq">
             <li>

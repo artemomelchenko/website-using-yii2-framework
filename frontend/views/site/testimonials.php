@@ -16,7 +16,7 @@ $this->registerJsFile('js/owl.carousel.min.js', ['depends' => [\frontend\assets\
 $this->registerJsFile('js/testimonials-slider.js', ['depends' => [\frontend\assets\AppAsset::className()]]);
 
 
-$this->title = 'Contact';
+$this->title = 'Testimonials';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="parent-container">
@@ -145,10 +145,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container">
         <div class="section-four">
             <div class="image-block-3">
-                <img src="img/illustration_3.png" alt="illustration_3">
+                <img src="img/testimonials.png" alt="testimonials-png">
             </div>
             <div class="form-block">
-                <h3 class="h3 t-center">Write testimonial</h3>
+                <h2 class="t-center">Write testimonial</h2>
                 <div class="form-block-description">But I must explain to you how all this mistaken idea of
                     denouncing pleasure and praising pain was born</div>
                 <div class="form-block">
