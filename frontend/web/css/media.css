@@ -5,7 +5,7 @@
 }
 
 @media(max-width:1300px) {
-    .sellers-div, .services-div, .faq-div, .contact-div {
+    .sellers-div, .services-div, .faq-div, .contact-div, .sellers-div-one {
         display: none;
     }
 }
@@ -31,7 +31,7 @@
         font-size: 30px;
     }
     .sec-2-block {
-        min-height: 370px;
+        min-height: 430px;;
     }
     .section-two-block-text {
         margin-top: 50px;

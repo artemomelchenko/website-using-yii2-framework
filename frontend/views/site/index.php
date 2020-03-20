@@ -23,7 +23,7 @@ $this->title = 'My Yii Application';
                     <a href="/services"><button class="button-yellow button-yellow-others">Start now!</button></a>
                 </div>
             </div>
-            <div class="block-section-image"><img src="img/image-section-1.png" alt="image-section-1"></div>
+            <div class="block-section-image"><img src="img/illustration-home.png" alt="image-section-1"></div>
         </div>
     </div>
 </div>
@@ -85,7 +85,7 @@ $this->title = 'My Yii Application';
 
 
                 <div class="sec-2-block">
-                    <h class="section-two-img-text">
+                    <div class="section-two-img-text">
                         <div class="section-two-img-text-img"><img src="img/icon_reviews.png" alt=""></div>
                         <h3 class="section-two-img-text-title">Reviews and<br> Customer Service</h3>
                     </div>
@@ -156,7 +156,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
             <div class="section-three-img-block">
-                <img src="img/illustration_2.png" alt="section-three-img">
+                <img src="img/faqs-image.png" alt="section-three-img">
             </div>
         </div>
     </div>
@@ -169,7 +169,7 @@ $this->title = 'My Yii Application';
     <div class="container">
         <div class="section-four">
             <div class="image-block-3">
-                <img src="img/illustration_3.png" alt="illustration_3">
+                <img src="img/contact-page.png" alt="illustration_3">
             </div>
             <div class="form-block">
                 <h2 class="t-center">Contact Us!</h2>
