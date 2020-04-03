@@ -14,7 +14,7 @@ use Yii;
  * @property int|null $hot
  * @property int $id_service
  *
- * @property Service $service
+ * @property Services $service
  */
 class Subservices extends \yii\db\ActiveRecord
 {
@@ -36,7 +36,7 @@ class Subservices extends \yii\db\ActiveRecord
             [['hot', 'id_service'], 'integer'],
             [['name', 'price'], 'string', 'max' => 255],
             [['description'], 'string', 'max' => 500],
-            [['id_service'], 'exist', 'skipOnError' => true, 'targetClass' => Service::className(), 'targetAttribute' => ['id_service' => 'id']],
+            [['id_service'], 'exist', 'skipOnError' => true, 'targetClass' => Services::className(), 'targetAttribute' => ['id_service' => 'id']],
         ];
     }
 

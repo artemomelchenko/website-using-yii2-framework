@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "{{%services}}".
@@ -12,7 +13,7 @@ use Yii;
  * @property string $description
  * @property string|null $img
  *
- * @property Subservice[] $subservices
+ * @property Subservices[] $subservices
  */
 class Services extends \yii\db\ActiveRecord
 {
@@ -56,6 +57,35 @@ class Services extends \yii\db\ActiveRecord
      */
     public function getSubservices()
     {
-        return $this->hasMany(Subservice::className(), ['id_service' => 'id']);
+        return $this->hasMany(Subservices::className(), ['id_service' => 'id']);
+    }
+
+    public function getImg()
+    {
+        $image = UploadedFile::getInstance($this, 'img');
+        if (!is_null($image)) {
+            $ext = end((explode(".", $image->name)));
+            $avatar = Yii::$app->security->generateRandomString() . ".{$ext}";
+            Yii::$app->params['uploadPath'] = Yii::getAlias('@frontend') . '/web/img/' . $avatar;
+            $path = Yii::$app->params['uploadPath'];
+            $image->saveAs($path);
+            $this->img = $avatar;
+        }
+    }
+
+    public function getUpdate($id)
+    {
+        $old_img = self::findOne($id)->img;
+        $image = UploadedFile::getInstance($this, 'img');
+        if (is_null($image)) {
+            $this->img = $old_img;
+        } else {
+            $ext = end((explode(".", $image->name)));
+            $avatar = Yii::$app->security->generateRandomString() . ".{$ext}";
+            Yii::$app->params['uploadPath'] = Yii::getAlias('@frontend') . '/web/img/' . $avatar;
+            $path = Yii::$app->params['uploadPath'];
+            $image->saveAs($path);
+            $this->img = $avatar;
+        }
     }
 }

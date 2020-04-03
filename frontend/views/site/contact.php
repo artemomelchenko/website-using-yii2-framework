@@ -25,18 +25,18 @@ $this->params['breadcrumbs'][] = $this->title;
                 <form name="mainForm" class="main-form mt-20">
 
                     <div class="row-form input-block-form">
-                        <input type="text" name="" id="input_name" class="global-input" id="">
+                        <input type="text" name="input_name" id="input_name" class="global-input">
                         <label id="label_name">Name</label>
                     </div>
 
                     <div class="row-form input-block-form">
-                        <input type="email" name="" id="input_email" class="global-input" id="">
+                        <input type="email" name="input_email" id="input_email" class="global-input">
                         <label id="label_email">E-mail</label>
                     </div>
 
 
                     <div class="row-form input-block-form">
-                        <input type="text" name="" id="input_message" class="global-input">
+                        <input type="text" name="input_message" id="input_message" class="global-input">
                         <label id="label_message">Message</label>
                     </div>
 

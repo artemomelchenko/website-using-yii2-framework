@@ -209,4 +209,20 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public static function sendToTelegram(array $arr){
+
+        $token = '1181672776:AAHAal4hVi6mcKp1BLtgMo4i4jTR4sce5Jg';
+        $chat_id = "-325095074";
+
+        $txt = '';
+
+        foreach($arr as $key => $value) {
+            $txt .= "<b>".$key."</b> ".$value."%0A";
+            $arr2[] = "<b>".$key."</b> ".$value."</br>";
+
+        };
+
+        $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+    }
 }

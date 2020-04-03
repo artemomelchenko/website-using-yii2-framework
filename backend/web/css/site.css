@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    font-size: 1rem;
 }
 
 .wrap {
@@ -118,4 +119,28 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+.breadcrumb{
+    background: 0 0;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+    padding: 0;
+    float: right !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+.breadcrumb li::before {
+    display: inline-block;
+    padding-right: .5rem;
+    color: #6c757d;
+    content: "/";
+    padding-left: .5rem;
 }

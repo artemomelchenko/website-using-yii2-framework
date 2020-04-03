@@ -2,10 +2,17 @@
 
 namespace frontend\controllers;
 
+use common\models\Faq;
+use common\models\Services;
+use common\models\Subservices;
+use common\models\Testimonials;
+use common\models\User;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
 use yii\base\InvalidArgumentException;
+use yii\db\Expression;
+use yii\helpers\VarDumper;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -68,6 +75,13 @@ class SiteController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+
+        return parent::beforeAction($action);
+    }
+
     /**
      * Displays homepage.
      *
@@ -75,17 +89,81 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $services = Services::find()->all();
+        $faq = Faq::find()->all();
+
+        $post = Yii::$app->request->post();
+
+        if ($post){
+
+            $arr = [
+                'Name:' => $post['input_name'],
+                'Email:' => $post['input_email'],
+                'Message:' => $post['input_message'],
+            ];
+
+            User::sendToTelegram($arr);
+
+            return $this->redirect('/success');
+        }
+
+        return $this->render('index', [
+            'services' => $services,
+            'faq' => $faq
+        ]);
     }
 
     public function actionTestimonials()
     {
-        return $this->render('testimonials');
+
+        $model = new Testimonials();
+        $post = Yii::$app->request->post();
+
+        if ($post){
+
+
+           $model->name = $post['input_name'];
+            $model->email    = $post['input_email'];
+            $model->message   = $post['input_message'];
+            $model->accepted = 0;
+            $model->created = 0;
+            $model->date_create = new Expression('NOW');
+            $model->save();
+
+//            return $this->redirect('/success');
+        }
+
+
+        $testimonals = Testimonials::find()->where(['accepted' => 1])->all();
+        return $this->render('testimonials', [
+            'testimonials' => $testimonals
+        ]);
     }
 
     public function actionServices()
     {
-        return $this->render('services');
+
+        $post = Yii::$app->request->post();
+
+        if ($post){
+
+            $arr = [
+                'Name:' => $post['input_name'],
+                'Email:' => $post['input_email'],
+                'Message:' => $post['input_message'],
+            ];
+
+            User::sendToTelegram($arr);
+
+            return $this->redirect('/success');
+        }
+
+        $serbices = Services::find()->with('subservices')->all();
+//        VarDumper::dump($serbices,10,1);
+        return $this->render('services', [
+            'services' => $serbices
+        ]);
     }
 
     public function actionSuccess()
@@ -135,20 +213,35 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
-                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
-            } else {
-                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
-            }
 
-            return $this->refresh();
-        } else {
-            return $this->render('contact', [
-                'model' => $model,
-            ]);
+        $post = Yii::$app->request->post();
+
+        if ($post){
+
+            $arr = [
+                'Name:' => $post['input_name'],
+                'Email:' => $post['input_email'],
+                'Message:' => $post['input_message'],
+            ];
+
+            User::sendToTelegram($arr);
+
+            return $this->redirect('/success');
         }
+//        $model = new ContactForm();
+//        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+//            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+//                Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
+//            } else {
+//                Yii::$app->session->setFlash('error', 'There was an error sending your message.');
+//            }
+//
+//            return $this->refresh();
+//        } else {
+            return $this->render('contact', [
+//                'model' => $model,
+            ]);
+//        }
     }
 
     /**
