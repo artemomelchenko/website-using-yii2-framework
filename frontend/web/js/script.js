@@ -1,18 +1,14 @@
 //Menu
 
-jQuery(".menu-toggle").click(function() {
+jQuery(".menu-toggle").click(function () {
   jQuery("ul").toggleClass("opening");
   jQuery(this).toggleClass("open");
 });
 
 // Toggle Collapse
-$(".faq li .question").click(function() {
-  $(this)
-    .find(".plus-minus-toggle")
-    .toggleClass("collapsed");
-  $(this)
-    .parent()
-    .toggleClass("active");
+$(".faq li .question").click(function () {
+  $(this).find(".plus-minus-toggle").toggleClass("collapsed");
+  $(this).parent().toggleClass("active");
 });
 
 //Validate form
@@ -28,7 +24,7 @@ if (
   let submit_button = document.getElementById("submit_form");
 
   // Function checked input name
-  input_name.addEventListener("blur", function() {
+  input_name.addEventListener("blur", function () {
     let value = this.value;
     let label_name = document.getElementById("label_name");
 
@@ -45,7 +41,7 @@ if (
   });
 
   // Function checked input email
-  input_email.addEventListener("blur", function() {
+  input_email.addEventListener("blur", function () {
     let value = this.value;
     let label_email = document.getElementById("label_email");
     check = /[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/.test(value);
@@ -67,7 +63,7 @@ if (
   });
 
   // Function checked input message
-  input_message.addEventListener("blur", function() {
+  input_message.addEventListener("blur", function () {
     let value = this.value;
     let label_message = document.getElementById("label_message");
 
@@ -114,3 +110,37 @@ function closePopup() {
   popupContain.classList.remove("active");
   shadow.classList.remove("active");
 }
+//Contact form attach photo
+$('input[type="file"]').each(function () {
+  // get label text
+  var label = $(this).parents(".form-group").find("label").text();
+  label = label ? label : "Attach your photo";
+
+  // wrap the file input
+  $(this).wrap('<div class="input-file"></div>');
+  // display label
+  $(this).before('<span class="btn">' + label + "</span>");
+  // we will display selected file here
+  $(this).before('<span class="file-selected"></span>');
+
+  // file input change listener
+  $(this).change(function (e) {
+    // Get this file input value
+    var val = $(this).val();
+
+    // Display the filename
+    $(this).siblings(".file-selected").text("uploaded your file");
+  });
+});
+
+// Open the file browser when our custom button is clicked.
+$(".input-file .btn").click(function () {
+  $(this).siblings('input[type="file"]').trigger("click");
+});
+
+$(".row-messenger").mouseover(function () {
+  $("#messenger-1").attr("src", "img/icon-messenger-hover.png");
+});
+$(".row-messenger").mouseout(function () {
+  $("#messenger-1").attr("src", "img/icon-messenger.png");
+});

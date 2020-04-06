@@ -42,10 +42,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <div class="row-form input-block-form">
                         <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()" class="form-submit button-yellow" value="Start now!">
+
                     </div>
+
+                    <div class="mt-15">or</div>
+                    <a class="a-defoult" href="#">
+                        <div class="row-messenger">Contact Us via Messenger <img src="img/icon-messenger.png" id="messenger-1" alt="icon-messager"></div>
+                    </a>
             </div>
             </form>
-            </div>
         </div>
     </div>
+</div>
 </div>

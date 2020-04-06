@@ -24,116 +24,116 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <div class="owl-carousel testimonials mt-50">
-        <?php foreach ($testimonials as $testimonial): ?>
-        <div>
-            <div class="testimonials-slider-block">
-                <div class="img-block-testimonials"><img src="img/<?= $testimonial->img ?>" class="img-client" alt="img-client"></div>
-                <div class="text-block-testimonials">
-                    <div class="name-testimonial-author">
-                        <div class="name-client"><?= $testimonial->name ?></div>
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-                    </div>
-                    <div class="text-testimonials"><?= $testimonial->message ?>
+        <?php foreach ($testimonials as $testimonial) : ?>
+            <div>
+                <div class="testimonials-slider-block">
+                    <div class="img-block-testimonials"><img src="img/<?= $testimonial->img ?>" class="img-client" alt="img-client"></div>
+                    <div class="text-block-testimonials">
+                        <div class="name-testimonial-author">
+                            <div class="name-client"><?= $testimonial->name ?></div>
+                            <!--                        <div class="date-testimonial">04.03.2020</div>-->
+                        </div>
+                        <div class="text-testimonials"><?= $testimonial->message ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
-<!--        <div>-->
-<!--            <div class="testimonials-slider-block">-->
-<!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
-<!--                <div class="text-block-testimonials">-->
-<!--                    <div class="name-testimonial-author">-->
-<!--                        <div class="name-client">John Doe</div>-->
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-<!--                    </div>-->
-<!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
-<!--                        denouncing pleasure and praising-->
-<!--                        pain-->
-<!--                        was born and I will give you a complete account of the system, and expound the actual-->
-<!--                        teachings-->
-<!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
-<!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div class="testimonials-slider-block">-->
-<!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
-<!--                <div class="text-block-testimonials">-->
-<!--                    <div class="name-testimonial-author">-->
-<!--                        <div class="name-client">John Doe</div>-->
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-<!--                    </div>-->
-<!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
-<!--                        denouncing pleasure and praising-->
-<!--                        pain-->
-<!--                        was born and I will give you a complete account of the system, and expound the actual-->
-<!--                        teachings-->
-<!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
-<!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div class="testimonials-slider-block">-->
-<!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
-<!--                <div class="text-block-testimonials">-->
-<!--                    <div class="name-testimonial-author">-->
-<!--                        <div class="name-client">John Doe</div>-->
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-<!--                    </div>-->
-<!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
-<!--                        denouncing pleasure and praising-->
-<!--                        pain-->
-<!--                        was born and I will give you a complete account of the system, and expound the actual-->
-<!--                        teachings-->
-<!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
-<!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div class="testimonials-slider-block">-->
-<!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
-<!--                <div class="text-block-testimonials">-->
-<!--                    <div class="name-testimonial-author">-->
-<!--                        <div class="name-client">John Doe</div>-->
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-<!--                    </div>-->
-<!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
-<!--                        denouncing pleasure and praising-->
-<!--                        pain-->
-<!--                        was born and I will give you a complete account of the system, and expound the actual-->
-<!--                        teachings-->
-<!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
-<!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <div class="testimonials-slider-block">-->
-<!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
-<!--                <div class="text-block-testimonials">-->
-<!--                    <div class="name-testimonial-author">-->
-<!--                        <div class="name-client">John Doe</div>-->
-<!--                        <div class="date-testimonial">04.03.2020</div>-->
-<!--                    </div>-->
-<!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
-<!--                        denouncing pleasure and praising-->
-<!--                        pain-->
-<!--                        was born and I will give you a complete account of the system, and expound the actual-->
-<!--                        teachings-->
-<!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
-<!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
+        <!--        <div>-->
+        <!--            <div class="testimonials-slider-block">-->
+        <!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
+        <!--                <div class="text-block-testimonials">-->
+        <!--                    <div class="name-testimonial-author">-->
+        <!--                        <div class="name-client">John Doe</div>-->
+        <!--                        <div class="date-testimonial">04.03.2020</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
+        <!--                        denouncing pleasure and praising-->
+        <!--                        pain-->
+        <!--                        was born and I will give you a complete account of the system, and expound the actual-->
+        <!--                        teachings-->
+        <!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
+        <!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div>-->
+        <!--            <div class="testimonials-slider-block">-->
+        <!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
+        <!--                <div class="text-block-testimonials">-->
+        <!--                    <div class="name-testimonial-author">-->
+        <!--                        <div class="name-client">John Doe</div>-->
+        <!--                        <div class="date-testimonial">04.03.2020</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
+        <!--                        denouncing pleasure and praising-->
+        <!--                        pain-->
+        <!--                        was born and I will give you a complete account of the system, and expound the actual-->
+        <!--                        teachings-->
+        <!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
+        <!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div>-->
+        <!--            <div class="testimonials-slider-block">-->
+        <!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
+        <!--                <div class="text-block-testimonials">-->
+        <!--                    <div class="name-testimonial-author">-->
+        <!--                        <div class="name-client">John Doe</div>-->
+        <!--                        <div class="date-testimonial">04.03.2020</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
+        <!--                        denouncing pleasure and praising-->
+        <!--                        pain-->
+        <!--                        was born and I will give you a complete account of the system, and expound the actual-->
+        <!--                        teachings-->
+        <!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
+        <!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div>-->
+        <!--            <div class="testimonials-slider-block">-->
+        <!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
+        <!--                <div class="text-block-testimonials">-->
+        <!--                    <div class="name-testimonial-author">-->
+        <!--                        <div class="name-client">John Doe</div>-->
+        <!--                        <div class="date-testimonial">04.03.2020</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
+        <!--                        denouncing pleasure and praising-->
+        <!--                        pain-->
+        <!--                        was born and I will give you a complete account of the system, and expound the actual-->
+        <!--                        teachings-->
+        <!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
+        <!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div>-->
+        <!--            <div class="testimonials-slider-block">-->
+        <!--                <div class="img-block-testimonials"><img src="img/img-client.png" class="img-client" alt="img-client"></div>-->
+        <!--                <div class="text-block-testimonials">-->
+        <!--                    <div class="name-testimonial-author">-->
+        <!--                        <div class="name-client">John Doe</div>-->
+        <!--                        <div class="date-testimonial">04.03.2020</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="text-testimonials">But I must explain to you how all this mistaken idea of-->
+        <!--                        denouncing pleasure and praising-->
+        <!--                        pain-->
+        <!--                        was born and I will give you a complete account of the system, and expound the actual-->
+        <!--                        teachings-->
+        <!--                        of the great explorer of the truth, the master-builder of human happiness. No one rejects,-->
+        <!--                        dislikes, or avoids pleasure itself, because it is pleasure-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 </div>
 
@@ -151,6 +151,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     <form name="mainForm" class="main-form mt-20">
 
                         <div class="row-form input-block-form">
+                            <div class="wrap">
+                                <div class="valign-middle">
+                                    <div class="form-group">
+                                        <label for="file" class="sr-only"></label>
+                                        <input type="file" accept="image/*" class="global-input" name="input_photo" id="file">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row-form input-block-form mt-minus-10">
                             <input type="text" name="input_name" id="input_name" class="global-input" id="">
                             <label id="label_name">Name</label>
                         </div>
