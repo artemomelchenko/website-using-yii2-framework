@@ -152,6 +152,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <input type="submit" id="submit_form" disabled="true" onclick="ValidateForm()"
                            class="form-submit button-yellow" value="Start now!">
                 </div>
+            
+                <div class="mt-15 fs-14 transform-none">or</div>
+                    <a class="a-defoult" href="<?= $set->link_for_messenger; ?>">
+                        <div class="row-messenger transform-none">Contact Us via Messenger <img src="img/icon-messenger.png" id="messenger-1" alt="icon-messager"></div>
+                    </a>
             </form>
         </div>
     </div>

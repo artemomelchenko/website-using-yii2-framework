@@ -31,7 +31,8 @@
         font-size: 30px;
     }
     .sec-2-block {
-        min-height: 430px;;
+        min-height: 430px;
+        ;
     }
     .section-two-block-text {
         margin-top: 50px;
@@ -211,8 +212,10 @@
         margin-left: 0%;
     }
     .popup-container {
-        left: 10%;
-        width: 80%;
+        left: 5%;
+        width: 90%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

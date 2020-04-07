@@ -133,7 +133,13 @@ img {
     background-color: #E66C00;
     outline: none;
 }
+.transform-none{
+    text-transform: none;
+}
 
+.fs-14{
+    font-size: 14px;
+}
 .fs-26 {
     font-size: 26px;
 }
@@ -1148,7 +1154,7 @@ nav a:hover, nav a:focus {
     width: 40%;
     position: fixed;
     left: 30.5%;
-    top: 20%;
+    top: 14%;
     z-index: 999;
     box-sizing: border-box;
     text-align: center;
