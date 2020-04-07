@@ -23,6 +23,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'telegram_link') ?>
 
+    <?= $form->field($model, 'google_analitycs') ?>
+
+    <?php // echo $form->field($model, 'fb_pixel') ?>
+
+    <?php // echo $form->field($model, 'email') ?>
+
+    <?php // echo $form->field($model, 'text_for_privacy_policy') ?>
+
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-outline-secondary']) ?>

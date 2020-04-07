@@ -13,27 +13,35 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="settings-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<!--    <h1>--><?//= Html::encode($this->title) ?><!--</h1>-->
 
     <p>
         <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
-                'method' => 'post',
-            ],
-        ]) ?>
+<!--        --><?//= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
+//            'class' => 'btn btn-danger',
+//            'data' => [
+//                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+//                'method' => 'post',
+//            ],
+//        ]) ?>
     </p>
-
+    <div class="card">
+        <div class="card-body">
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'for_code:ntext',
             'fb_link',
             'telegram_link',
+            'link_for_messenger',
+            'google_analitycs:ntext',
+            'fb_pixel:ntext',
+            'pixel_for_success:ntext',
+            'email:email',
+            'text_for_privacy_policy:ntext',
         ],
     ]) ?>
-
+        </div>
+    </div>
 </div>

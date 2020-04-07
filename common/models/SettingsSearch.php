@@ -18,7 +18,7 @@ class SettingsSearch extends Settings
     {
         return [
             [['id'], 'integer'],
-            [['for_code', 'fb_link', 'telegram_link'], 'safe'],
+            [['for_code', 'fb_link', 'telegram_link', 'google_analitycs', 'fb_pixel', 'email', 'text_for_privacy_policy', 'link_for_messenger', 'pixel_for_success'], 'safe'],
         ];
     }
 
@@ -63,7 +63,13 @@ class SettingsSearch extends Settings
 
         $query->andFilterWhere(['like', 'for_code', $this->for_code])
             ->andFilterWhere(['like', 'fb_link', $this->fb_link])
-            ->andFilterWhere(['like', 'telegram_link', $this->telegram_link]);
+            ->andFilterWhere(['like', 'telegram_link', $this->telegram_link])
+            ->andFilterWhere(['like', 'google_analitycs', $this->google_analitycs])
+            ->andFilterWhere(['like', 'fb_pixel', $this->fb_pixel])
+            ->andFilterWhere(['like', 'email', $this->email])
+            ->andFilterWhere(['like', 'text_for_privacy_policy', $this->text_for_privacy_policy])
+            ->andFilterWhere(['like', 'pixel_for_success', $this->pixel_for_success])
+            ->andFilterWhere(['like', 'link_for_messenger', $this->link_for_messenger]);
 
         return $dataProvider;
     }

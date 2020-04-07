@@ -18,6 +18,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'telegram_link')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'google_analitycs')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'fb_pixel')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'pixel_for_success')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'link_for_messenger')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'text_for_privacy_policy')->textarea(['rows' => 6]) ?>
+
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>

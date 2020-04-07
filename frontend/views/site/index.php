@@ -3,6 +3,8 @@
 /* @var $this yii\web\View */
 /* @var $service common\models\Services */
 /* @var $faq common\models\Faq */
+/* @var $settings common\models\Main */
+/* @var $set common\models\Settings */
 
 $this->title = 'AMZBurn';
 ?>
@@ -14,12 +16,8 @@ $this->title = 'AMZBurn';
         <div class="section-one">
             <div class="section-one-block-1">
                 <h1 class="section-one-text-h1 mt-70 sm-tb-mt-0">
-                    All-in-one<br>
-                    <u class="yellow-u">Amazon</u> Service<br>
-                    for sellers</h1>
-                <div class="section-one-text-p mt-25 ">Reach the maximum safety for your<br> business on Amazon. Get
-                    instant
-                    </br> reinstating.
+                    <?= $settings->main_text ?>
+                <div class="section-one-text-p mt-25 "><?= $settings->under_main_text ?>
                 </div>
                 <div class="mt-30 sm-tb-mt-10">
                     <a href="/services"><button class="button-yellow button-yellow-others">Start now!</button></a>
@@ -199,7 +197,7 @@ $this->title = 'AMZBurn';
                     </div>
 
                     <div class="mt-15">or</div>
-                    <a class="a-defoult" href="#">
+                    <a class="a-defoult" href="<?= $set->link_for_messenger; ?>">
                         <div class="row-messenger">Contact Us via Messenger <img src="img/icon-messenger.png" id="messenger-1" alt="icon-messager"></div>
                     </a>
 
@@ -218,12 +216,12 @@ $this->title = 'AMZBurn';
                     <li><a href="/contact">Contact us</a></li>
                     <br class="br-none">
                     <li><a href="/testimonials">Testimonials</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
                 </ul>
                 <div class="two">
-                    <div class="in-block"><a class="one" href="#"> <img class="facebook-img" src="img/facebook.png" alt="facebook_img"></a></div>
+                    <div class="in-block"><a class="one" href="<?= $set->fb_link ?>"> <img class="facebook-img" src="img/facebook.png" alt="facebook_img"></a></div>
                     <div class="in-block">
-                        <a class="one" href="#"> <img class="message-img" src="img/message.png" alt="message_img"></a></div>
+                        <a class="one" href="<?= $set->telegram_link ?>"> <img class="message-img" src="img/message.png" alt="message_img"></a></div>
                 </div>
             </div>
         </div>

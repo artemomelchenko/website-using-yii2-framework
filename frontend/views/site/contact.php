@@ -3,6 +3,8 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
+/* @var $settings \common\models\Contact*/
+/* @var $set \common\models\Settings */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -11,6 +13,10 @@ use yii\captcha\Captcha;
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginBlock('contact'); ?>
+<?= $settings->for_fb_pixel ?>
+<?= $settings->other_code ?>
+<?php $this->endBlock(); ?>
 <div class="wrapper pb-50">
     <div class="container">
         <div class="section-four">
@@ -19,9 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="form-block">
                 <h1 class="t-center mb-15">Contact Us!</h1>
-                <div class="form-block-description">Regarding any questions fill in the form or add us over
-                    facebook/telegram for easy
-                    communication.</div>
+                <div class="form-block-description"><?= $settings->contact_us_text ?></div>
                 <form name="mainForm" class="main-form mt-20">
 
                     <div class="row-form input-block-form">
@@ -46,7 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
 
                     <div class="mt-15">or</div>
-                    <a class="a-defoult" href="#">
+                    <a class="a-defoult" href="<?= $set->link_for_messenger ?>">
                         <div class="row-messenger">Contact Us via Messenger <img src="img/icon-messenger.png" id="messenger-1" alt="icon-messager"></div>
                     </a>
             </div>

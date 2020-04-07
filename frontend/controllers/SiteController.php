@@ -2,8 +2,13 @@
 
 namespace frontend\controllers;
 
+use common\models\Contact;
 use common\models\Faq;
+use common\models\Main;
+use common\models\PageServices;
+use common\models\PageTestimonials;
 use common\models\Services;
+use common\models\Settings;
 use common\models\Subservices;
 use common\models\Testimonials;
 use common\models\User;
@@ -90,8 +95,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
+        $settings = Main::findOne(1);
         $services = Services::find()->all();
         $faq = Faq::find()->all();
+        $set = Settings::findOne(1);
 
         $post = Yii::$app->request->post();
 
@@ -110,7 +117,9 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'services' => $services,
-            'faq' => $faq
+            'faq' => $faq,
+            'settings' => $settings,
+            'set' => $set,
         ]);
     }
 
@@ -119,6 +128,7 @@ class SiteController extends Controller
 
         $model = new Testimonials();
         $post = Yii::$app->request->post();
+        $settings = PageTestimonials::findOne(1);
 
         if ($post){
 
@@ -137,7 +147,8 @@ class SiteController extends Controller
 
         $testimonals = Testimonials::find()->where(['accepted' => 1])->all();
         return $this->render('testimonials', [
-            'testimonials' => $testimonals
+            'testimonials' => $testimonals,
+            'settings' => $settings,
         ]);
     }
 
@@ -145,30 +156,45 @@ class SiteController extends Controller
     {
 
         $post = Yii::$app->request->post();
+        $settings = PageServices::findOne(1);
 
         if ($post){
+
+            $pieces = explode('.', $post['number-post']);
+//            $post['number-post']
+            $s1 = Services::findOne($pieces[0])->name;
+            $s2 = Subservices::findOne($pieces[1])->name;
 
             $arr = [
                 'Name:' => $post['input_name'],
                 'Email:' => $post['input_email'],
                 'Message:' => $post['input_message'],
+                'Service:' => $s1,
+                'SubService:' => $s2,
             ];
 
             User::sendToTelegram($arr);
 
+//            VarDumper::dump($post,10,1);
             return $this->redirect('/success');
         }
 
         $serbices = Services::find()->with('subservices')->all();
-//        VarDumper::dump($serbices,10,1);
         return $this->render('services', [
-            'services' => $serbices
+            'services' => $serbices,
+            'settings' => $settings,
+            'set' => $set,
         ]);
     }
 
     public function actionSuccess()
     {
         return $this->render('success');
+    }
+
+    public function actionPrivacyPolicy()
+    {
+        return $this->render('privacy');
     }
 
     /**
@@ -215,7 +241,8 @@ class SiteController extends Controller
     {
 
         $post = Yii::$app->request->post();
-
+        $settings = Contact::findOne(1);
+        $set = Settings::findOne(1);
         if ($post){
 
             $arr = [
@@ -239,7 +266,8 @@ class SiteController extends Controller
 //            return $this->refresh();
 //        } else {
             return $this->render('contact', [
-//                'model' => $model,
+                'settings' => $settings,
+                'set' => $set
             ]);
 //        }
     }

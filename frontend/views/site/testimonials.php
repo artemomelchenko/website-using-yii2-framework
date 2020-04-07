@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
+/* @var $settings \common\models\PageTestimonials */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -19,6 +20,10 @@ $this->registerJsFile('js/testimonials-slider.js', ['depends' => [\frontend\asse
 $this->title = 'Testimonials';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginBlock('testimonials'); ?>
+<?= $settings->for_fb_pixel ?>
+<?= $settings->other_code ?>
+<?php $this->endBlock(); ?>
 <div class="parent-container">
     <h1 class="t-center mt-70">Testimonials</h1>
 
@@ -145,8 +150,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
             <div class="form-block">
                 <h2 class="t-center">Write testimonial</h2>
-                <div class="form-block-description">But I must explain to you how all this mistaken idea of
-                    denouncing pleasure and praising pain was born</div>
+                <div class="form-block-description"><?= $settings->contact_us_text ?></div>
                 <div class="form-block">
                     <form name="mainForm" class="main-form mt-20">
 

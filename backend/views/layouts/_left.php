@@ -1,6 +1,7 @@
 <?php
 
 $controllerId = Yii::$app->controller->uniqueId;
+$username = \common\models\User::findOne(Yii::$app->user->id)->username;
 ?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -18,47 +19,158 @@ $controllerId = Yii::$app->controller->uniqueId;
                 <img src="/admin/img/No avatar.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Admin</a>
+                <a href="/admin/" class="d-block"><?= $username ?></a>
             </div>
         </div>
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link active">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Pages
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview menu-open">
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    Main Page
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/main/index" class="nav-link <?= $controllerId == 'main' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Settings for Main Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/services/index" class="nav-link <?= $controllerId == 'services' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Services</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/faq/index" class="nav-link <?= $controllerId == 'faq' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FAQ</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    Services Page
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/subservices/index" class="nav-link <?= $controllerId == 'subservices' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>SubServices</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/page-services/index" class="nav-link <?= $controllerId == 'page-services' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Settings for Services</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    Contact page
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item <?= $controllerId == 'contact' ? 'active' : '' ?>">
+                                    <a href="/admin/contact/index" class="nav-link <?= $controllerId == 'contact' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Settings for contact</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-server"></i>
+                                <p>
+                                    Testimonials Page
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/admin/testimonials/index" class="nav-link <?= $controllerId == 'testimonials' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Testimonals</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/page-testimonials/index" class="nav-link <?= $controllerId == 'page-testimonials' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Settings for testimonials</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item <?= $controllerId == 'settings' ? 'active' : '' ?>">
+                            <a href="/admin/settings/index" class="nav-link <?= $controllerId == 'settings' ? 'active' : '' ?>">
+                                <i class="fas fa-server nav-icon"></i>
+                                <p>Settings</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item">
-                    <a href="/admin/services/index" class="nav-link <?= $controllerId == 'services' ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-server"></i>
-                        <p>
-                            Services
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/faq/index" class="nav-link <?= $controllerId == 'faq' ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-server"></i>
-                        <p>
-                            FAQ
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/subservices/index" class="nav-link <?= $controllerId == 'subservices' ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-server"></i>
-                        <p>
-                            Subservices
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/admin/testimonials/index" class="nav-link <?= $controllerId == 'testimonials' ? 'active' : '' ?>">
-                        <i class="nav-icon fas fa-server"></i>
-                        <p>
-                            Testimonials
-                        </p>
-                    </a>
-                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a href="/admin/services/index" class="nav-link --><?//= $controllerId == 'services' ? 'active' : '' ?><!--">-->
+<!--                        <i class="nav-icon fas fa-server"></i>-->
+<!--                        <p>-->
+<!--                            Services-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="/admin/faq/index" class="nav-link --><?//= $controllerId == 'faq' ? 'active' : '' ?><!--">-->
+<!--                        <i class="nav-icon fas fa-server"></i>-->
+<!--                        <p>-->
+<!--                            FAQ-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="/admin/subservices/index" class="nav-link --><?//= $controllerId == 'subservices' ? 'active' : '' ?><!--">-->
+<!--                        <i class="nav-icon fas fa-server"></i>-->
+<!--                        <p>-->
+<!--                            Subservices-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="/admin/testimonials/index" class="nav-link --><?//= $controllerId == 'testimonials' ? 'active' : '' ?><!--">-->
+<!--                        <i class="nav-icon fas fa-server"></i>-->
+<!--                        <p>-->
+<!--                            Testimonials-->
+<!--                        </p>-->
+<!--                    </a>-->
+<!--                </li>-->
 
 <!--                <li class="nav-item has-treeview menu-open">-->
 <!--                    <a href="#" class="nav-link active">-->

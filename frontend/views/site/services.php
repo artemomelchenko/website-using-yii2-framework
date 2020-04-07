@@ -4,6 +4,8 @@
 /* @var $form yii\bootstrap\ActiveForm */
 
 /* @var $model \frontend\models\ContactForm */
+/* @var $settings \common\models\PageServices */
+/* @var $set \common\models\Settings */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -12,6 +14,10 @@ use yii\captcha\Captcha;
 $this->title = 'Services';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginBlock('services'); ?>
+<?= $settings->for_fb_pixel ?>
+<?= $settings->other_code ?>
+<?php $this->endBlock(); ?>
 <div id="shadow"></div>
 
 <div class="parent-container">
@@ -120,7 +126,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 facebook/telegram for easy
                 communication.
             </div>
-            <form name="mainForm" class="main-form mt-20">
+            <form name="mainForm" method="post" class="main-form mt-20">
 
                 <div class="row-form input-block-form">
                     <input type="text" name="input_name" id="input_name" class="global-input">

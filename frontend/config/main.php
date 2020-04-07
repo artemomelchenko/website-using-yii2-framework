@@ -47,6 +47,7 @@ return [
                 'testimonials' => 'site/testimonials',
                 'contact' => 'site/contact',
                 'success' => 'site/success',
+                'privacy-policy' => 'site/privacy-policy',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
             ],
         ],

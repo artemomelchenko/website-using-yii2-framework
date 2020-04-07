@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
+/* @var $settings \common\models\Settings */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -11,6 +12,9 @@ use yii\captcha\Captcha;
 $this->title = 'Success';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<?php $this->beginBlock('thankyou'); ?>
+<?= $settings->pixel_for_success ?>
+<?php $this->endBlock(); ?>
 <div class="wrapper">
     <div class="container">
         <div class="site-error">

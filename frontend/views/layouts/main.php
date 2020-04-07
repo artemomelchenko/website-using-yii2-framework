@@ -12,6 +12,7 @@ use frontend\assets\AppAsset;
 use common\widgets\Alert;
 
 AppAsset::register($this);
+$settings = \common\models\Settings::find()->one();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -20,8 +21,23 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= $settings->google_analitycs ?>
+    <?= $settings->fb_pixel ?>
+    <?= $settings->for_code ?>
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <?php if (isset($this->blocks['services'])): ?>
+        <?= $this->blocks['services'] ?>
+    <?php endif; ?>
+    <?php if (isset($this->blocks['contact'])): ?>
+        <?= $this->blocks['contact'] ?>
+    <?php endif; ?>
+    <?php if (isset($this->blocks['thankyou'])): ?>
+        <?= $this->blocks['thankyou'] ?>
+    <?php endif; ?>
+    <?php if (isset($this->blocks['testimonials'])): ?>
+        <?= $this->blocks['testimonials'] ?>
+    <?php endif; ?>
     <?php $this->head() ?>
 </head>
 <body>
@@ -46,7 +62,7 @@ AppAsset::register($this);
 </header>
 <?= $content ?>
 <footer class="global-footer">
-    <div class="copywrite">© AmzBurn, 2020</div>
+    <div class="copywrite">© AmzBurn, <?= date('Y') ?></div>
     <div class="name-bizmental-footer">CREATED BY <span><a target="blank" href="https://bizmental.com.ua/">bizmental</a></span></div>
 </footer>
 
